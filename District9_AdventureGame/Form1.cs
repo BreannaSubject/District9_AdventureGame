@@ -38,6 +38,46 @@ namespace District9_AdventureGame
                 {
                     scene = 5;
                 }
+                else if (scene == 5)
+                {
+                    scene = 8;
+                }
+                else if (scene == 7)
+                {
+                    scene = 0;
+                }
+                else if (scene == 8)
+                {
+                    scene = 10;
+                }
+                else if (scene == 10)
+                {
+                    scene = 12;
+                }
+                else if (scene == 12)
+                {
+                    scene = 13;
+                }
+                else if (scene == 13)
+                {
+                    scene = 22;
+                }
+                else if (scene == 14)
+                {
+                    scene = 15;
+                }
+                else if (scene == 15)
+                {
+                    scene = 17;
+                }
+                else if (scene == 18)
+                {
+                    scene = 24;
+                }
+                else if (scene == 19)
+                {
+                    scene = 13;
+                }
             }
             else if (e.KeyCode == Keys.M)
             {
@@ -49,6 +89,53 @@ namespace District9_AdventureGame
                 {
                     scene = 3;
                 }
+                else if (scene == 5)
+                {
+                    scene = 6;
+                }
+                else if (scene == 7)
+                {
+                    this.Close();
+                }
+                else if (scene == 8)
+                {
+                    scene = 9;
+                }
+                else if (scene == 10)
+                {
+                    scene = 11;
+                }
+                else if (scene == 12)
+                {
+                    scene = 14;
+                }
+                else if (scene == 13)
+                {
+                    scene = 19;
+                }
+                else if (scene == 14)
+                {
+                    scene = 12;
+                }
+                else if (scene == 15)
+                {
+                    scene = 16;
+                }
+                else if (scene == 18)
+                {
+                    scene = 15;
+                }
+                else if (scene == 19)
+                {
+                    if (random == 7 || random == 8 || random == 9 || random == 10)
+                    {
+                        scene = 21;
+                    }
+                    else
+                    {
+                        scene = 20;
+                    }
+                }
             }
             else if (e.KeyCode == Keys.Space)
             {
@@ -56,9 +143,49 @@ namespace District9_AdventureGame
                 {
                     scene = 0;
                 }
+                else if (scene == 2)
+                {
+                    scene = 4;
+                }
                 else if (scene == 3)
                 {
                     scene = 7;
+                }
+                else if (scene == 4)
+                {
+                    scene = 2;
+                }
+                else if (scene == 6)
+                {
+                    scene = 7;
+                }
+                else if (scene == 9)
+                {
+                    scene = 7;
+                }
+                else if (scene == 11)
+                {
+                    scene = 12;
+                }
+                else if (scene == 15)
+                {
+                    scene = 18;
+                }
+                else if (scene == 16)
+                {
+                    scene = 15;
+                }
+                else if (scene == 17)
+                {
+                    scene = 7;
+                }
+                else if (scene == 20)
+                {
+                    scene = 7;
+                }
+                else if (scene == 21)
+                {
+                    scene = 51;
                 }
             }
             else 
@@ -97,7 +224,7 @@ namespace District9_AdventureGame
                     outputLabel.Text = "You find nothing on your bookshelf, except the word 'Escape' cut into the wood. There must be a knife or a sword around here. ";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 case 5:
                     outputLabel.Text = "You find a tanto with the letters NM engraved in the handle. The blade is dull, but stained with blood.";
@@ -110,7 +237,7 @@ namespace District9_AdventureGame
                     outputLabel.Text = "You grab the tanto and wait until the footsteps stop and the door opens. You jump to attack, and get shot. ";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 case 7:
                     outputLabel.Text = "You lose" + "\n" + "\nPlay Again?";
@@ -120,41 +247,41 @@ namespace District9_AdventureGame
                     break;
                 case 8:
                     outputLabel.Text = "You hide in your closet, holding your breath as you hear the door to your cell open. ";
-                    blueLabel.Text = "";
-                    redLabel.Text = "";
+                    blueLabel.Text = "Continue hiding";
+                    redLabel.Text = "Fight";
                     greenLabel.Text = "";
                     break;
                 case 9:
                     outputLabel.Text = "You picked a fight with the wrong people.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 case 10:
                     outputLabel.Text = "You can hear your heartbeat in your ears, but you continue to hide, until the last footstep exits your room.";
                     outputLabel.Text += "You see a small crack in the door. You could open it and escape, or you can search more.";
-                    blueLabel.Text = "";
-                    redLabel.Text = "";
+                    blueLabel.Text = "Escape";
+                    redLabel.Text = "Search";
                     greenLabel.Text = "";
                     break;
                 case 11:
                     outputLabel.Text = "You look by the window sill, where you find a red flower, and the word 'Escape'";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue";
                     break;
                 case 12:
                     outputLabel.Text = "You exit the room, only to find an abandoned medical cart outside your room, with the word 'Run' written in blood.";
-                    blueLabel.Text = "";
-                    redLabel.Text = "";
+                    blueLabel.Text = "Run Right";
+                    redLabel.Text = "Run Left";
                     greenLabel.Text = "";
                     break;
                 case 13:
                     outputLabel.Text = "You run to the right, smashing through a door that leads to a garden. You take a look at the flowers, and they look familiar, except they are colorless";
-                    outputLabel.Text += "Flashback *You could see a blinding light over head, which, when the light shone on the flower, turned it red. Blood red.*";
-                    outputLabel.Text += "In the gardens, there is a seemingly useless elevator, or a path that leads you to more of the jail.";
-                    blueLabel.Text = "";
-                    redLabel.Text = "";
+                    outputLabel.Text += "\n" + "\nFlashback *You could see a blinding light over head, which, when the light shone on the flower, turned it red. Blood red.*";
+                    outputLabel.Text += "\n" + "\nIn the gardens, there is a seemingly useless elevator, or a path that leads you to more of the jail.";
+                    blueLabel.Text = "Path";
+                    redLabel.Text = "Elevator";
                     greenLabel.Text = "";
                     break;
                 case 14:
@@ -173,13 +300,13 @@ namespace District9_AdventureGame
                     outputLabel.Text = "You open the duffel bag and find nothing.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 case 17:
                     outputLabel.Text = "You open the drawer, only to find a snake inside. With one bite, you're dead.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 case 18:
                     outputLabel.Text = "You open the closet to find another duffel bag.";
@@ -197,13 +324,13 @@ namespace District9_AdventureGame
                     outputLabel.Text = "The elevator explodes.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 case 21:
                     outputLabel.Text = "The elevator takes you to a lavender field." + "\n" + "\nYou've escaped District 9, but you still don't know who you are.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 case 22:
                     outputLabel.Text = "You follow the path to another part of the garden, where you find a smashed drone, with a red blinking light on it.";
@@ -220,14 +347,15 @@ namespace District9_AdventureGame
                     break;
                 case 24:
                     outputLabel.Text = "You find some clothes inside, along with a note that says 'Find the bus'";
-                    blueLabel.Text = "";
-                    redLabel.Text = "";
+                    outputLabel.Text += "\n" + "\nYou see the bus outside the window. Now all you have to do is get to it.";
+                    blueLabel.Text = "Right";
+                    redLabel.Text = "Left";
                     greenLabel.Text = "";
                     break;
                 case 25:
                     outputLabel.Text = "You turn left, only to find a red line on the floor. You decide to follow it.";
-                    outputLabel.Text += "\nThe line takes you down a hallway, and another, and another, until you windup in a dark room.";
-                    outputLabel.Text += "\nThe only thing you see in the room is the shine off of a tanto just like yours.";
+                    outputLabel.Text += "\n" + "\nThe line takes you down a hallway, and another, and another, until you windup in a dark room.";
+                    outputLabel.Text += "\n" + "\nThe only thing you see in the room is the shine off of a tanto just like yours.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
                     greenLabel.Text = "";
@@ -396,7 +524,7 @@ namespace District9_AdventureGame
                     break;
                 case 51:
                     outputLabel.Text = "You Win!!";
-                    outputLabel.Text = "\n" + "\nPlay Again?";
+                    outputLabel.Text += "\n" + "\nPlay Again?";
                     blueLabel.Text = "Yes";
                     redLabel.Text = "No";
                     greenLabel.Text = "";
