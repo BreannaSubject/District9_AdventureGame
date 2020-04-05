@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Media;
 
 namespace District9_AdventureGame
 {
@@ -16,6 +17,7 @@ namespace District9_AdventureGame
         int scene = 0;
         Random randGen = new Random();
         int random;
+        SoundPlayer hell = new SoundPlayer(Properties.Resources.hell);
         public District9()
         {
             InitializeComponent();
@@ -443,6 +445,7 @@ namespace District9_AdventureGame
                     redLabel.Text = "Red";
                     greenLabel.Text = "";
                     imageBox.BackgroundImage = Properties.Resources.District_9;
+                    hell.Play();
                     break;
                 case 1:
                     outputLabel.Text = "The yellow paper says read the paper";

@@ -122,5 +122,8 @@
   <ItemGroup>
     <None Include="Resources\lavendar field.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hell-Mike_Koenig-144950046.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
