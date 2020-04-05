@@ -78,6 +78,34 @@ namespace District9_AdventureGame
                 {
                     scene = 13;
                 }
+                else if (scene == 22)
+                {
+                    scene = 23;
+                }
+                else if (scene == 23)
+                {
+                    scene = 34;
+                }
+                else if (scene == 24)
+                {
+                    scene = 27;
+                }
+                else if (scene == 27)
+                {
+                    scene = 28;
+                }
+                else if (scene == 29)
+                {
+                    scene = 32;
+                }
+                else if (scene == 30)
+                {
+                    scene = 54;
+                }
+                else if (scene == 35)
+                {
+                    scene = 38;
+                }
             }
             else if (e.KeyCode == Keys.M)
             {
@@ -136,6 +164,34 @@ namespace District9_AdventureGame
                         scene = 20;
                     }
                 }
+                else if (scene == 22)
+                {
+                    scene = 13;
+                }
+                else if (scene == 23)
+                {
+                    scene = 27;
+                }
+                else if (scene == 24)
+                {
+                    scene = 25;
+                }
+                else if (scene == 27)
+                {
+                    scene = 29;
+                }
+                else if (scene == 29)
+                {
+                    scene = 30;
+                }
+                else if (scene == 30)
+                {
+                    scene = 31;
+                }
+                else if (scene == 35)
+                {
+                    scene = 37;
+                }
             }
             else if (e.KeyCode == Keys.Space)
             {
@@ -186,6 +242,78 @@ namespace District9_AdventureGame
                 else if (scene == 21)
                 {
                     scene = 51;
+                }
+                else if (scene == 25)
+                {
+                    if (random >= 9)
+                    {
+                        scene = 26;
+                    }
+                    else
+                    {
+                        scene = 52;
+                    }
+                }
+                else if (scene == 26)
+                {
+                    if (random >= 6)
+                    {
+                        scene = 27;
+                    }
+                    else
+                    {
+                        scene = 53;
+                    }
+                }
+                else if (scene == 28)
+                {
+                    if (random <= 4)
+                    {
+                        scene = 7;
+                    }
+                    else
+                    {
+                        scene = 29;
+                    }
+                }
+                else if (scene == 31)
+                {
+                    scene = 7;
+                }
+                else if (scene == 32)
+                {
+                    if (random <= 3)
+                    {
+                        scene = 7;
+                    }
+                    else
+                    {
+                        scene = 33;
+                    }
+
+                }
+                else if (scene == 33)
+                {
+                    scene = 51;
+                }
+                else if (scene == 34)
+                {
+                    if (random >= 3)
+                    {
+                        scene = 35;
+                    }
+                    else
+                    {
+                        scene = 36;
+                    }
+                }
+                else if (scene == 36)
+                {
+                    scene = 7;
+                }
+                else if (scene == 37)
+                {
+                    scene = 7;
                 }
             }
             else 
@@ -358,13 +486,13 @@ namespace District9_AdventureGame
                     outputLabel.Text += "\n" + "\nThe only thing you see in the room is the shine off of a tanto just like yours.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 case 26:
                     outputLabel.Text = "You exit the room, only to find a window to the garage right near you." + "You smash through the window.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 case 27:
                     outputLabel.Text = "You find yourself in the garage. All you can see are armored vehicles. You want to search the garage.";
@@ -376,7 +504,7 @@ namespace District9_AdventureGame
                     outputLabel.Text = "A guard catches you.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 case 29:
                     outputLabel.Text = "You see the garage doors, just as some guards see you.";
@@ -394,7 +522,7 @@ namespace District9_AdventureGame
                     outputLabel.Text = "You hop into the back of the armored truck, only to be captured by more guards.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 case 32:
                     outputLabel.Text = "You run towards the garage door, smashing the open button.";
@@ -402,7 +530,7 @@ namespace District9_AdventureGame
                     outputLabel.Text += "\nYou see the bus on the other side of the parking lot. You run to the bus, hoping and praying that nobody catches you.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 case 33:
                     outputLabel.Text = "You hop onto the bus, shutting the doors quickly. You go to the drivers seat, but there's someone already there.";
@@ -410,13 +538,13 @@ namespace District9_AdventureGame
                     outputLabel.Text += "\n" + "\nYou are CB97. The 9th escapee of District 9.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 case 34:
                     outputLabel.Text = "You turn right, running towards a tall tower. The light blinding you as you go by. Because of the light, you can't see the gaping hole in front of you.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 case 35:
                     outputLabel.Text = "You somehow avoid the hole completely as you make your way towards the tower.";
@@ -428,14 +556,14 @@ namespace District9_AdventureGame
                     outputLabel.Text = "You fell in the pit of Despair! :(";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 case 37:
                     outputLabel.Text = "You find yourself in another part of the garden. There is only one path, so you decide to follow it.";
                     outputLabel.Text += "\n" + "\nA guard finds you in the garden.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 case 38:
                     outputLabel.Text = "You open the door.";
@@ -454,7 +582,7 @@ namespace District9_AdventureGame
                     outputLabel.Text = "You have fallen and cannot get up.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 case 41:
                     outputLabel.Text = "You find a bed, along with pictures of you with people that you can't quite remember";
