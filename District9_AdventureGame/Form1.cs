@@ -106,6 +106,38 @@ namespace District9_AdventureGame
                 {
                     scene = 38;
                 }
+                else if (scene == 38)
+                {
+                    scene = 39;
+                }
+                else if (scene == 39)
+                {
+                    scene = 45;
+                }
+                else if (scene == 41)
+                {
+                    scene = 43;
+                }
+                else if (scene == 42)
+                {
+                    scene = 41;
+                }
+                else if (scene == 43)
+                {
+                    scene = 44;
+                }
+                else if (scene == 46)
+                {
+                    scene = 48;
+                }
+                else if (scene == 48)
+                {
+                    scene = 50;
+                }
+                else if (scene == 51)
+                {
+                    scene = 0;
+                }
             }
             else if (e.KeyCode == Keys.M)
             {
@@ -191,6 +223,52 @@ namespace District9_AdventureGame
                 else if (scene == 35)
                 {
                     scene = 37;
+                }
+                else if (scene == 38)
+                {
+                    if (random <= 5)
+                    {
+                        scene = 40;
+                    }
+                    else
+                    {
+                        scene = 41;
+                    }
+                }
+                else if (scene == 39)
+                {
+                    scene = 46;
+                }
+                else if (scene == 41)
+                {
+                    scene = 42;
+                }
+                else if (scene == 42)
+                {
+                    if (random == 1)
+                    {
+                        scene = 40;
+                    }
+                    else
+                    {
+                        scene = 32;
+                    }
+                }
+                else if (scene == 43)
+                {
+                    scene = 41;
+                }
+                else if (scene == 46)
+                {
+                    scene = 47;
+                }
+                else if (scene == 48)
+                {
+                    scene = 49;
+                }
+                else if (scene == 51)
+                {
+                    this.Close();
                 }
             }
             else if (e.KeyCode == Keys.Space)
@@ -314,6 +392,42 @@ namespace District9_AdventureGame
                 else if (scene == 37)
                 {
                     scene = 7;
+                }
+                else if (scene == 40)
+                {
+                    scene = 7;
+                }
+                else if (scene == 44)
+                {
+                    scene = 51;
+                }
+                else if (scene == 45)
+                {
+                    scene = 41;
+                }
+                else if (scene == 47)
+                {
+                    scene = 7;
+                }
+                else if (scene == 49)
+                {
+                    scene = 7;
+                }
+                else if (scene == 50)
+                {
+                    scene = 7;
+                }
+                else if (scene == 52)
+                {
+                    scene = 7;
+                }
+                else if (scene == 53)
+                {
+                    scene = 7;
+                }
+                else if (scene == 54)
+                {
+                    scene = 32;
                 }
             }
             else 
@@ -609,14 +723,14 @@ namespace District9_AdventureGame
                     outputLabel.Text += "\n" + "\nYou've escaped District 9, but you still don't know who you are.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 case 45:
                     outputLabel.Text = "The signature appears to be written in red marker. You take a closer look, only to find that it is not red marker, but blood.";
                     outputLabel.Text += "\n" + "\nBeside the signature, you see a smaller signature, written in blue marker. It's signed NM, the same mark that's on the tanto.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 case 46:
                     outputLabel.Text = "The board has pictures of bloody and gruesome murders, all committed by one person, NM, the same person that own the tanto.";
@@ -629,7 +743,7 @@ namespace District9_AdventureGame
                     outputLabel.Text = "You run, only to get stopped by a guard.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 case 48:
                     outputLabel.Text = "Where do you hide?";
@@ -641,14 +755,14 @@ namespace District9_AdventureGame
                     outputLabel.Text = "You hide in the closet. You think that nobody can hear your heavy breathing, and just as you think your safe, the closet door opens.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 case 50:
                     outputLabel.Text = "You hide under the bed.The door creeks open and you see a pair of spiked black heel boots walking towards you.";
                     outputLabel.Text = "\n" + "\nYou think your safe, until someone peeks under the bed.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 case 51:
                     outputLabel.Text = "You Win!!";
@@ -661,19 +775,19 @@ namespace District9_AdventureGame
                     outputLabel.Text = "With one swing of the sword, you die.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 case 53:
                     outputLabel.Text = "You break almost every bone in your body as you crash to the ground.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 case 54:
                     outputLabel.Text = "You hide behind the tool chest, which is only a little away from the garage door. You know you can make it.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
-                    greenLabel.Text = "";
+                    greenLabel.Text = "Press the green button to continue.";
                     break;
                 default:
                     break;
