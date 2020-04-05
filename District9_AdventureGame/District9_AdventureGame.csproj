@@ -95,5 +95,32 @@
   <ItemGroup>
     <None Include="Resources\yellow_50x50.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\garage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\garden.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hallway.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shack.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tower.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\death.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elevator.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lavendar field.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
