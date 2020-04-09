@@ -18,6 +18,10 @@ namespace District9_AdventureGame
         Random randGen = new Random();
         int random;
         SoundPlayer hell = new SoundPlayer(Properties.Resources.hell);
+        SoundPlayer beep = new SoundPlayer(Properties.Resources.beep);
+        SoundPlayer scream = new SoundPlayer(Properties.Resources.scream);
+        SoundPlayer creepy = new SoundPlayer(Properties.Resources.creepy);
+        SoundPlayer waterphone = new SoundPlayer(Properties.Resources.waterphone);
         public District9()
         {
             InitializeComponent();
@@ -445,6 +449,7 @@ namespace District9_AdventureGame
                     redLabel.Text = "Red";
                     greenLabel.Text = "";
                     imageBox.BackgroundImage = Properties.Resources.District_9;
+                    beep.Stop();
                     hell.Play();
                     break;
                 case 1:
@@ -452,6 +457,7 @@ namespace District9_AdventureGame
                     blueLabel.Text = "";
                     redLabel.Text = "";
                     greenLabel.Text = "Press the green button to continue";
+                    hell.Stop();
                     break;
                 case 2:
                     outputLabel.Text = "You see the word 'Miroh' in big bolded letters. It's signed CB97. You've seen this signature before.";
@@ -459,12 +465,14 @@ namespace District9_AdventureGame
                     blueLabel.Text = "Closet";
                     redLabel.Text = "Under the bed";
                     greenLabel.Text = "Bookshelf";
+                    hell.Stop();
                     break;
                 case 3:
                     outputLabel.Text = "You look under the bed to find a spider. It bites you and you die.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
                     greenLabel.Text = "Press the green button to continue.";
+                    scream.Play();
                     break;
                 case 4:
                     outputLabel.Text = "You find nothing on your bookshelf, except the word 'Escape' cut into the wood. There must be a knife or a sword around here. ";
@@ -484,6 +492,7 @@ namespace District9_AdventureGame
                     blueLabel.Text = "";
                     redLabel.Text = "";
                     greenLabel.Text = "Press the green button to continue.";
+                    scream.Play();
                     break;
                 case 7:
                     outputLabel.Text = "You lose" + "\n" + "\nPlay Again?";
@@ -491,24 +500,30 @@ namespace District9_AdventureGame
                     redLabel.Text = "No";
                     greenLabel.Text = "";
                     imageBox.BackgroundImage = Properties.Resources.death;
+                    scream.Stop();
+                    beep.Play();
                     break;
                 case 8:
                     outputLabel.Text = "You hide in your closet, holding your breath as you hear the door to your cell open. ";
                     blueLabel.Text = "Continue hiding";
                     redLabel.Text = "Fight";
                     greenLabel.Text = "";
+                    hell.Play();
                     break;
                 case 9:
                     outputLabel.Text = "You picked a fight with the wrong people.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
                     greenLabel.Text = "Press the green button to continue.";
+                    hell.Stop();
+                    scream.Play();
                     break;
                 case 10:
                     outputLabel.Text = "You can hear your heartbeat in your ears, but you continue to hide, until the last footstep exits your room.";
                     outputLabel.Text += "You see a small crack in the door. You could open it and escape, or you can search more.";
                     blueLabel.Text = "Escape";
                     redLabel.Text = "Search";
+                    hell.Stop();
                     greenLabel.Text = "";
                     break;
                 case 11:
@@ -523,6 +538,8 @@ namespace District9_AdventureGame
                     redLabel.Text = "Run Left";
                     greenLabel.Text = "";
                     imageBox.BackgroundImage = Properties.Resources.hallway;
+                    waterphone.Play();
+                    hell.Stop();
                     break;
                 case 13:
                     outputLabel.Text = "You run to the right, smashing through a door that leads to a garden. You take a look at the flowers, and they look familiar, except they are colorless";
@@ -532,12 +549,15 @@ namespace District9_AdventureGame
                     redLabel.Text = "Elevator";
                     greenLabel.Text = "";
                     imageBox.BackgroundImage = Properties.Resources.garden;
+                    waterphone.Stop();
                     break;
                 case 14:
                     outputLabel.Text = "You run to the left, smashing through on of the many doors. You find another cell just like yours.";
                     blueLabel.Text = "Search";
                     redLabel.Text = "Exit";
                     greenLabel.Text = "";
+                    waterphone.Stop();
+                    hell.Play();
                     break;
                 case 15:
                     outputLabel.Text = "There are three things that catch your eye, the closet, the dresser drawers, and a duffel bag on the floor.";
@@ -545,24 +565,29 @@ namespace District9_AdventureGame
                     redLabel.Text = "Duffel Bag";
                     greenLabel.Text = "Closet";
                     imageBox.BackgroundImage = Properties.Resources.District_9;
+                    hell.Play();
                     break;
                 case 16:
                     outputLabel.Text = "You open the duffel bag and find nothing.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
                     greenLabel.Text = "Press the green button to continue.";
+                    hell.Stop();
                     break;
                 case 17:
                     outputLabel.Text = "You open the drawer, only to find a snake inside. With one bite, you're dead.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
                     greenLabel.Text = "Press the green button to continue.";
+                    hell.Stop();
+                    scream.Play();
                     break;
                 case 18:
                     outputLabel.Text = "You open the closet to find another duffel bag.";
                     blueLabel.Text = "Open it";
                     redLabel.Text = "Leave it";
                     greenLabel.Text = "";
+                    hell.Stop();
                     break;
                 case 19:
                     outputLabel.Text = "You walk into the elevator, which looks overgrown and rusted. On the panel, there is a big red button labeled 'Hell'.";
@@ -576,6 +601,7 @@ namespace District9_AdventureGame
                     blueLabel.Text = "";
                     redLabel.Text = "";
                     greenLabel.Text = "Press the green button to continue.";
+                    scream.Play();
                     break;
                 case 21:
                     outputLabel.Text = "The elevator takes you to a lavender field." + "\n" + "\nYou've escaped District 9, but you still don't know who you are.";
@@ -612,6 +638,7 @@ namespace District9_AdventureGame
                     redLabel.Text = "";
                     greenLabel.Text = "Press the green button to continue.";
                     imageBox.BackgroundImage = Properties.Resources.hallway;
+                    waterphone.Play();
                     break;
                 case 26:
                     outputLabel.Text = "You exit the room, only to find a window to the garage right near you." + "You smash through the window.";
@@ -619,6 +646,7 @@ namespace District9_AdventureGame
                     redLabel.Text = "";
                     greenLabel.Text = "Press the green button to continue.";
                     imageBox.BackgroundImage = Properties.Resources.garage;
+                    waterphone.Play();
                     break;
                 case 27:
                     outputLabel.Text = "You find yourself in the garage. All you can see are armored vehicles. You want to search the garage.";
@@ -626,17 +654,21 @@ namespace District9_AdventureGame
                     redLabel.Text = "Left";
                     greenLabel.Text = "";
                     imageBox.BackgroundImage = Properties.Resources.garage;
+                    waterphone.Play();
                     break;
                 case 28:
                     outputLabel.Text = "A guard catches you.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
                     greenLabel.Text = "Press the green button to continue.";
+                    waterphone.Stop();
+                    scream.Play();
                     break;
                 case 29:
                     outputLabel.Text = "You see the garage doors, just as some guards see you.";
                     blueLabel.Text = "Run";
                     redLabel.Text = "Hide";
+                    waterphone.Stop();
                     greenLabel.Text = "";
                     break;
                 case 30:
@@ -650,6 +682,7 @@ namespace District9_AdventureGame
                     blueLabel.Text = "";
                     redLabel.Text = "";
                     greenLabel.Text = "Press the green button to continue.";
+                    scream.Play();
                     break;
                 case 32:
                     outputLabel.Text = "You run towards the garage door, smashing the open button.";
@@ -686,6 +719,7 @@ namespace District9_AdventureGame
                     blueLabel.Text = "";
                     redLabel.Text = "";
                     greenLabel.Text = "Press the green button to continue.";
+                    scream.Play();
                     break;
                 case 37:
                     outputLabel.Text = "You find yourself in another part of the garden. There is only one path, so you decide to follow it.";
@@ -694,6 +728,7 @@ namespace District9_AdventureGame
                     redLabel.Text = "";
                     greenLabel.Text = "Press the green button to continue.";
                     imageBox.BackgroundImage = Properties.Resources.garden;
+                    scream.Play();
                     break;
                 case 38:
                     outputLabel.Text = "You open the door.";
@@ -708,12 +743,14 @@ namespace District9_AdventureGame
                     redLabel.Text = "Examine the board";
                     greenLabel.Text = "";
                     imageBox.BackgroundImage = Properties.Resources.shack;
+                    creepy.Play();
                     break;
                 case 40:
                     outputLabel.Text = "You have fallen and cannot get up.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
                     greenLabel.Text = "Press the green button to continue.";
+                    scream.Play();
                     break;
                 case 41:
                     outputLabel.Text = "You find a bed, along with pictures of you with people that you can't quite remember";
@@ -749,6 +786,7 @@ namespace District9_AdventureGame
                     blueLabel.Text = "";
                     redLabel.Text = "";
                     greenLabel.Text = "Press the green button to continue.";
+                    creepy.Play();
                     break;
                 case 46:
                     outputLabel.Text = "The board has pictures of bloody and gruesome murders, all committed by one person, NM, the same person that own the tanto.";
@@ -756,6 +794,7 @@ namespace District9_AdventureGame
                     blueLabel.Text = "Hide";
                     redLabel.Text = "Run";
                     greenLabel.Text = "";
+                    creepy.Play();
                     break;
                 case 47:
                     outputLabel.Text = "You run, only to get stopped by a guard.";
@@ -763,25 +802,32 @@ namespace District9_AdventureGame
                     redLabel.Text = "";
                     greenLabel.Text = "Press the green button to continue.";
                     imageBox.BackgroundImage = Properties.Resources.garden;
+                    creepy.Stop();
+                    scream.Play();
                     break;
                 case 48:
                     outputLabel.Text = "Where do you hide?";
                     blueLabel.Text = "Bed";
                     redLabel.Text = "Closet";
                     greenLabel.Text = "";
+                    creepy.Play();
                     break;
                 case 49:
                     outputLabel.Text = "You hide in the closet. You think that nobody can hear your heavy breathing, and just as you think your safe, the closet door opens.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
                     greenLabel.Text = "Press the green button to continue.";
+                    creepy.Stop();
+                    scream.Play();
                     break;
                 case 50:
                     outputLabel.Text = "You hide under the bed.The door creeks open and you see a pair of spiked black heel boots walking towards you.";
-                    outputLabel.Text = "\n" + "\nYou think your safe, until someone peeks under the bed.";
+                    outputLabel.Text += "\n" + "\nYou think your safe, until someone peeks under the bed.";
                     blueLabel.Text = "";
                     redLabel.Text = "";
                     greenLabel.Text = "Press the green button to continue.";
+                    creepy.Stop();
+                    scream.Play();
                     break;
                 case 51:
                     outputLabel.Text = "You Win!!";
@@ -789,6 +835,7 @@ namespace District9_AdventureGame
                     blueLabel.Text = "Yes";
                     redLabel.Text = "No";
                     greenLabel.Text = "";
+                    beep.Play();
                     break;
                 case 52:
                     outputLabel.Text = "With one swing of the sword, you die.";
@@ -796,6 +843,8 @@ namespace District9_AdventureGame
                     redLabel.Text = "";
                     greenLabel.Text = "Press the green button to continue.";
                     imageBox.BackgroundImage = Properties.Resources.hallway;
+                    waterphone.Stop();
+                    scream.Play();
                     break;
                 case 53:
                     outputLabel.Text = "You break almost every bone in your body as you crash to the ground.";
@@ -803,6 +852,8 @@ namespace District9_AdventureGame
                     redLabel.Text = "";
                     greenLabel.Text = "Press the green button to continue.";
                     imageBox.BackgroundImage = Properties.Resources.garage;
+                    waterphone.Stop();
+                    scream.Play();
                     break;
                 case 54:
                     outputLabel.Text = "You hide behind the tool chest, which is only a little away from the garage door. You know you can make it.";

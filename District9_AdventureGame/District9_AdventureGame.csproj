@@ -125,5 +125,17 @@
   <ItemGroup>
     <None Include="Resources\hell-Mike_Koenig-144950046.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Beep-SoundBible.com-923660219.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scary Scream-SoundBible.com-1115384336.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waterphone-daniel_simon.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\creepy-background-daniel_simon.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
